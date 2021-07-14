@@ -1,0 +1,15 @@
+{
+	"name": "社会性フィルター",
+	"manifest_version": 3,
+	"version": "0.0.1",
+    "description": "あなたの言葉をにゃーんします",
+    "icons": {
+        "16": "favicon-16x16.png",
+        "32": "favicon-32x32.png"
+    },
+	"action": {
+        "default_title": "社会性フィルター",
+        "default_icon": "favicon-32x32.png",
+        "default_popup": "popup.html"	
+    }
+}
