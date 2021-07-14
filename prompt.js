@@ -1,31 +1,19 @@
-const meowOfCat = [
-	"にゃーん",
-	"うなーお",
-	"なむなむ",
-	"カッカッカッ",
-	"フシャーッ",
-	"うるるるる…",
-	"ごあーん",
-	"ぎゃぅ",
-	"んみゃあ",
-	"んんー",
-	"ひぁー",
-	"みゃおう"
-];
-
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 function Meowize() {
 	const textbox = document.getElementById("meow");
 	const inputValue = textbox.value;
 	const meowInt = inputValue.length % meowOfCat.length;
+	const figureInt = getRandomInt(figureOfCat.length);
 	const outputValue = meowOfCat[meowInt];
+	const outputFigure = figureOfCat[figureInt];
 
-
-	const catweet = "https://twitter.com/intent/tweet?text=" + "🐈 < " + outputValue + "&hashtags=社会性フィルター";
+	const catweet = "https://twitter.com/intent/tweet?text=" + outputFigure +" < " + outputValue + "&hashtags=社会性フィルター";
 	
-	document.getElementById("postmeow").innerHTML = outputValue;
-	document.getElementById("meowlink").href = catweet;
 	document.getElementById("meow").value = outputValue;
+	window.open(catweet);
 }
 
 document.getElementById("meowButton").onclick = function () {
